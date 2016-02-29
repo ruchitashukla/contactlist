@@ -1,9 +1,10 @@
 package contactlist;
-
+/**
+ * Tests class ContactList by calling all methods on a ContactList object.
+ */
 public class TestContactList {
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Person person1 = new Person();
 		person1.setFirstName("abc");
 		person1.setLastName("xyz");
@@ -13,9 +14,10 @@ public class TestContactList {
 		person1.setNotes("test 1");
 		
 		ContactList contactList = new ContactList(1);
+		contactList.getContactsFromDisk();
 		contactList.addNewContact(person1);
 		contactList.printAllContacts();
 		contactList.getContactByLastName("xyz");
-		contactList.storeContactsOnDisk();
+		contactList.storeContactsOnDisk();	
 	}
 }
