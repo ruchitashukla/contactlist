@@ -13,7 +13,7 @@ public class TestContactList {
 		person1.setEmailId("abc@gmail.com");
 		person1.setNotes("test 1");
 		
-		ContactList contactList = new ContactList(1);
+		ContactList contactList = new ContactList();
 		contactList.getContactsFromDisk();
 		contactList.addNewContact(person1);
 		contactList.printAllContacts();

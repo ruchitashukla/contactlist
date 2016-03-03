@@ -1,13 +1,12 @@
 package contactlist;
+import java.util.ArrayList;
 /**
- * Stores the persons` contact detail
+ * One object of this class represents information about many people
  */
 public class ContactList {
-	private Person[] personList;
-	//Initialize array size 
-	//For example, new ContactList(5), sets array size as 5
-	ContactList(int size) {
-	}
+	//arrayList will save all persons` data.
+	ArrayList<Person> myList = new ArrayList<Person>();
+	
 	//Adds the new contact
 	public void addNewContact(Person newPerson) {
 	}
@@ -17,10 +16,10 @@ public class ContactList {
 	//Gets contacts by last name
 	public void getContactByLastName(String lastName){
 	}
-	//Stores contacts on disk from array
+	//Stores contacts on disk from arrayList
 	public void storeContactsOnDisk() {
 	}
-	//gets contacts from disk to array
+	//gets contacts from disk to arrayList
 	public void getContactsFromDisk() {
 	}
 }
