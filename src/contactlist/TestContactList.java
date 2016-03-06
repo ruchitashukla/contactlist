@@ -18,7 +18,7 @@ public class TestContactList {
 		contactList.getContactsFromDisk();
 		contactList.addNewContact(person1);
 		contactList.printAllContacts();
-		contactList.getContactByLastName("xyz");
+		contactList.printContactByLastName("xyz");
 		contactList.storeContactsOnDisk();
 		System.out.println("Program completed.");
 	}
