@@ -90,6 +90,6 @@ public class Person {
 	 * returns persons` information
 	 */
 	public String toString(){
-		return firstName + " " + lastName +"\n"+ streetAddress+"/n"  + emailId + "\n" + phoneNumber +"/n" + notes;
+		return "";
 	} 
 }

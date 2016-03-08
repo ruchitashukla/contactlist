@@ -37,4 +37,15 @@ public class ContactList {
 	 */
 	public void getContactsFromDisk() {
 	}
+	/**
+	 * sorts the contacts by lastname using predefined sort method
+	 */
+	public void sortContactsbyLastname(){	
+	}
+	/**
+	 * prints contact information
+	 */
+	public String toString(){
+		return "";
+	}
 }
