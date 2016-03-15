@@ -6,39 +6,52 @@ package contactlist;
 public class TestContactList {
 	
 	public static void main(String[] args) {
-		/**
-		 * R.S.
-		 */
-		System.out.println("Program started.");
-		Person person1 = new Person();
-		person1.setFirstName("abc");
-		person1.setLastName("xyz");
-		person1.setStreetAddress("Foothill");
-		person1.setPhoneNumber("1234567890");
-		person1.setEmailId("abc@gmail.com");
-		person1.setNotes("test 1");
+		System.out.println("Welcome to the: TEAM 4 CONTACT LIST APPLICATION!\n");
+		
+		System.out.println("program test started.\n");
 		
 		/**
-		 * R.S.
+		 * [1] create a new, empty list of contacts
+		 * ECS
 		 */
-		System.out.println(person1.getFirstName());
-		System.out.println(person1.getLastName());
-		System.out.println(person1.getStreetAddress());
-		System.out.println(person1.getPhoneNumber());
-		System.out.println(person1.getEmailId());
-		System.out.println(person1.getNotes());
-		System.out.println(person1.toString());
+		System.out.println("step 1\n");
 		
-		/**
-		 * R.S.
-		 */
 		ContactList contactList = new ContactList();
-		contactList.getContactsFromDisk();
-		contactList.addNewContact(person1);
 		contactList.printAllContacts();
-		contactList.printContactByLastName("xyz");
-		contactList.storeContactsOnDisk();
-		System.out.println("Program completed.");
+
+		/**
+		 * [2] add a new contact to the list
+		 * ECS
+		 */
+		System.out.println("step 2\n");
+		
+		contactList.addNewContact();
+		
+		/**
+		 * [3] print the list to show that the new contact was added to the list
+		 * ECS
+		 */
+		System.out.println("step 3\n");
+		
+		contactList.printAllContacts();
+		
+		/**
+		 * [4] add another new contact to the list
+		 * ECS
+		 */
+		System.out.println("step 4\n");
+		
+		contactList.addNewContact();
+		
+		/**
+		 * [5] print the list to show that the second contact was added to the list
+		 * ECS
+		 */
+		System.out.println("step 5\n");
+		
+		contactList.printAllContacts();
+		
+		System.out.println("\nprogram test completed.");
 	}
 }
 /*
