@@ -1,5 +1,6 @@
 package contactlist;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * One object of this class represents information about many people
@@ -8,18 +9,54 @@ import java.util.ArrayList;
 public class ContactList {
 	/**
 	 * arrayList will save all persons` data.
+	 * R.S.
 	 */
 	private ArrayList<Person> myList = new ArrayList<Person>();
 	
 	/**
 	 * Adds the new contact
+	 * ECS W/help from team!
 	 */
-	public void addNewContact(Person newPerson) {
+	public void addNewContact() {
+		
+		Scanner scanner;
+		scanner = new Scanner(System.in);
+				
+		System.out.print("Please enter FIRST name: ");
+		String firstName = scanner.nextLine();		
+	
+		System.out.print("Please enter LAST name: ");
+		String lastName = scanner.nextLine();
+
+		System.out.print("Please enter ADDRESS: ");
+		String streetAddress = scanner.nextLine();
+
+		System.out.print("Please enter EMAIL: ");
+		String emailID = scanner.nextLine();
+
+		System.out.print("Please enter PHONE NUMBER: ");
+		String phoneNumber = scanner.nextLine();
+
+		System.out.print("User Notes: ");
+		String userNotes = scanner.nextLine();
+		
+		Person newPerson = new Person();
+		
+		newPerson.setFirstName(firstName);
+		newPerson.setLastName(lastName);
+		newPerson.setStreetAddress(streetAddress);
+		newPerson.setEmailId(emailID);
+		newPerson.setPhoneNumber(phoneNumber);
+		newPerson.setNotes(userNotes);
+				
+		myList.add(newPerson);
 	}
 	/**
 	 * Prints all contacts
+	 * ESC
 	 */
 	public void printAllContacts() {
+		System.out.println("Current List: \n" + myList.toString());
 	}
 	/**
 	 * it finds person by last name and prints its information like first name, 

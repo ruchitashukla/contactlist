@@ -107,9 +107,16 @@ public class Person {
 	} 
 	/**
 	 * returns persons` information
-	 * R.S.
+	 * ECS
 	 */
 	public String toString(){
-		return firstName + " " + lastName + "\n" + streetAddress + "\n" + phoneNumber + "\n" + emailId + "\n" + notes;
+		return 
+				"\n--------------------------------------------------" 
+				+ "\nNAME: " + getLastName() + ", " + getFirstName() 
+				+ "\n\nADDRESS: " + getStreetAddress() 
+				+ "\n\nEMAIL: " + getEmailId() 
+				+ "\n\nPHONE NUMBER: " + getPhoneNumber()
+				+ "\n\nUser Notes: " + getNotes() + "\n"
+				+ "--------------------------------------------------\n";
 	} 
 }
