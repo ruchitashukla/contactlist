@@ -3,12 +3,13 @@ import java.util.ArrayList;
 
 /**
  * One object of this class represents information about many people
+ * skeleton by R.S.
  */
 public class ContactList {
 	/**
 	 * arrayList will save all persons` data.
 	 */
-	ArrayList<Person> myList = new ArrayList<Person>();
+	private ArrayList<Person> myList = new ArrayList<Person>();
 	
 	/**
 	 * Adds the new contact
