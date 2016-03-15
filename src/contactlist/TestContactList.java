@@ -55,6 +55,75 @@ public class TestContactList {
 	}
 }
 /*
-Program started.
-Program completed.
+Welcome to the: TEAM 4 CONTACT LIST APPLICATION!
+
+program test started.
+
+step 1
+
+Current List: 
+[]
+step 2
+
+Please enter FIRST name: Eric
+Please enter LAST name: Cavazos-Smith
+Please enter ADDRESS: 920 Bluebonnet Drive, Sunnyvale, CA 94086
+Please enter EMAIL: talk2ericacs@outlook.com
+Please enter PHONE NUMBER: 408-796-9991
+User Notes: Team member of Team 4 Project
+step 3
+
+Current List: 
+[
+--------------------------------------------------
+NAME: Eric, Cavazos-Smith
+
+ADDRESS: 920 Bluebonnet Drive, Sunnyvale, CA 94086
+
+EMAIL: talk2ericacs@outlook.com
+
+PHONE NUMBER: 408-796-9991
+
+User Notes: Team member of Team 4 Project
+--------------------------------------------------
+]
+step 4
+
+Please enter FIRST name: John
+Please enter LAST name: Doe
+Please enter ADDRESS: 555 JohnDoe Street, City of JohnDoe, CA 55555
+Please enter EMAIL: johndoe@johndoe.com
+Please enter PHONE NUMBER: 555-555-5555
+User Notes: Not a real person :)
+step 5
+
+Current List: 
+[
+--------------------------------------------------
+NAME: Cavazos-Smith, Eric
+
+ADDRESS: 920 Bluebonnet Drive, Sunnyvale, CA 94086
+
+EMAIL: talk2ericacs@outlook.com
+
+PHONE NUMBER: 408-796-9991
+
+User Notes: Team member of Team 4 Project
+--------------------------------------------------
+, 
+--------------------------------------------------
+NAME: Doe, John
+
+ADDRESS: 555 JohnDoe Street, City of JohnDoe, CA 55555
+
+EMAIL: johndoe@johndoe.com
+
+PHONE NUMBER: 555-555-5555
+
+User Notes: Not a real person :)
+--------------------------------------------------
+]
+
+program test completed.
+
 */
