@@ -1,5 +1,6 @@
 package contactlist;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -52,10 +53,11 @@ public class ContactList {
 		myList.add(newPerson);
 	}
 	/**
-	 * Prints all contacts
-	 * ESC
+	 * Prints all contacts sorted by last name
+	 * R.S.
 	 */
 	public void printAllContacts() {
+		Collections.sort(myList);
 		System.out.println("Current List: \n" + myList.toString());
 	}
 	/**

@@ -3,7 +3,7 @@ package contactlist;
  * The one object of the Person represents firstName, lastName, streetAddress ,emailId, phoneNmuber and notes.
  * skeleton by R.S.
  */
-public class Person {
+public class Person implements Comparable {
 	private String firstName; // firstName is a data membercd
 	private String lastName; // lastName is a data member
 	private String streetAddress; // streetAddress is a data member
@@ -118,5 +118,18 @@ public class Person {
 				+ "\n\nPHONE NUMBER: " + getPhoneNumber()
 				+ "\n\nUser Notes: " + getNotes() + "\n"
 				+ "--------------------------------------------------\n";
-	} 
+	}
+	/**
+	 * compares persons by their lasNname, if lastName is same then compares with persons' firstName
+	 * R.S.
+	 */
+	@Override
+	public int compareTo(Object person){
+		Person newperson = (Person)person;
+		
+		if (this.lastName.equalsIgnoreCase(newperson.lastName)){
+			return this.firstName.compareTo(newperson.firstName);
+		}
+		return this.lastName.compareTo(newperson.lastName);
+	}
 }
