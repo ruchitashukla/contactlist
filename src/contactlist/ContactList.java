@@ -63,10 +63,30 @@ public class ContactList {
 	/**
 	 * it finds person by last name and prints its information like first name, 
 	 * last name using toString() of person class
+	 * R.G.
 	 */
 	
-	public void printContactByLastName(String lastName){
+	public void printContactByLastName() {
+		Scanner scanner;
+		scanner = new Scanner(System.in);
+
+		System.out.print("Please enter LAST name for search:");
+		String searchName = scanner.nextLine().trim().toUpperCase();
+
+		boolean found = false;
+
+		for (Person newperson : myList) {
+			if (newperson.getLastName().toUpperCase().equals(searchName)) {
+				System.out.println(newperson.toString());
+				found = true;
+			}
+		}
+
+		if (!found) {
+			System.out.println("LAST name was not found");
+		}
 	}
+	
 	/**
 	 * Stores contacts on disk from arrayList
 	 */
