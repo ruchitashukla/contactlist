@@ -36,7 +36,7 @@ public class TestContactList {
 					break;
 				}
 				case 3: {
-					//contactList.printContactByLastName();
+					contactList.printContactByLastName();
 					break;
 				}
 				case 4: {
