@@ -61,11 +61,10 @@ public class ContactList {
 		System.out.println("Current List: \n" + myList.toString());
 	}
 	/**
-	 * it finds person by last name and prints its information like first name, 
-	 * last name using toString() of person class
+	 * Find person by last name and prints its information like first name, 
+	 * last name using toString() of person class.
 	 * R.G.
 	 */
-	
 	public void printContactByLastName() {
 		Scanner scanner;
 		scanner = new Scanner(System.in);
