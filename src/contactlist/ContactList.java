@@ -99,7 +99,7 @@ public class ContactList {
 	/**
 	 * sorts the contacts by lastname using predefined sort method
 	 */
-	public void sortContactsbyLastname(){
+	private void sortContactsbyLastname(){
 		Collections.sort(myList);
 	}
 	/**
