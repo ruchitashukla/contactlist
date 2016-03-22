@@ -57,7 +57,7 @@ public class ContactList {
 	 * R.S.
 	 */
 	public void printAllContacts() {
-		Collections.sort(myList);
+		sortContactsbyLastname();
 		System.out.println("Current List: \n" + myList.toString());
 	}
 	/**
@@ -80,7 +80,8 @@ public class ContactList {
 	/**
 	 * sorts the contacts by lastname using predefined sort method
 	 */
-	public void sortContactsbyLastname(){	
+	public void sortContactsbyLastname(){
+		Collections.sort(myList);
 	}
 	/**
 	 * prints contact information
