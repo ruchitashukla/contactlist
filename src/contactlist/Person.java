@@ -128,8 +128,9 @@ public class Person implements Comparable {
 		Person newperson = (Person)person;
 		
 		if (this.lastName.equalsIgnoreCase(newperson.lastName)){
-			return this.firstName.compareTo(newperson.firstName);
+			return this.firstName.toLowerCase()
+					.compareTo(newperson.firstName.toLowerCase());
 		}
-		return this.lastName.compareTo(newperson.lastName);
+		return this.lastName.toLowerCase().compareTo(newperson.lastName.toLowerCase());
 	}
 }

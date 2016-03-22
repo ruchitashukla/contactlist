@@ -1,4 +1,7 @@
 package contactlist;
+
+import java.util.Scanner;
+
 /**
  * Tests class ContactList by calling all methods on a ContactList object.
  * skeleton by R.S.
@@ -8,122 +11,196 @@ public class TestContactList {
 	public static void main(String[] args) {
 		System.out.println("Welcome to the: TEAM 4 CONTACT LIST APPLICATION!\n");
 		
-		System.out.println("program test started.\n");
+		// System.out.println("program test started.\n");
 		
 		/**
 		 * [1] create a new, empty list of contacts
 		 * ECS
 		 */
-		System.out.println("step 1\n");
+		// System.out.println("step 1\n");
 		
 		ContactList contactList = new ContactList();
-		contactList.printAllContacts();
+		// contactList.printAllContacts();
 
 		/**
 		 * [2] add a new contact to the list
 		 * ECS
 		 */
-		System.out.println("step 2\n");
+		// System.out.println("step 2\n");
 		
-		contactList.addNewContact();
+		// contactList.addNewContact();
 		
 		/**
 		 * [3] print the list to show that the new contact was added to the list
 		 * ECS
 		 */
-		System.out.println("step 3\n");
+		// System.out.println("step 3\n");
 		
-		contactList.printAllContacts();
+		// contactList.printAllContacts();
 		
 		/**
 		 * [4] add another new contact to the list
 		 * ECS
 		 */
-		System.out.println("step 4\n");
+		// System.out.println("step 4\n");
 		
-		contactList.addNewContact();
+		// contactList.addNewContact();
 		
 		/**
 		 * [5] print the list to show that the second contact was added to the list
 		 * ECS
 		 */
-		System.out.println("step 5\n");
+		// System.out.println("step 5\n");
 		
-		contactList.printAllContacts();
+		// contactList.printAllContacts();
+
+		/**
+		 * [5] print the list to show that the second contact was added to the list
+		 * ECS
+		 */
+		// System.out.println("step 6\n");
 		
-		System.out.println("\nprogram test completed.");
+		// contactList.printContactByLastName();
+		
+		/**
+		 * [6] Run a loop to get user input about which task to perform
+		 * RG
+		 */
+		Scanner scanner;
+		scanner = new Scanner(System.in);
+		while (true) {
+			System.out.print(
+					"These are the tasks you can perform:\n"
+					+ "1. Print all contacts\n"
+					+ "2. Add new Contact\n"
+					+ "3. Find contacts by last name\n"
+					+ "4. Save and quit program\n"
+					+ "Please enter the task number you'd like to perform: ");
+			int option = scanner.nextInt();
+
+			switch (option) {
+				case 1: {
+					contactList.printAllContacts();
+					break;
+				}
+				case 2: {
+					contactList.addNewContact();
+					break;
+				}
+				case 3: {
+					//contactList.printContactByLastName();
+					break;
+				}
+				case 4: {
+					System.out.println("Saving data and exiting program!");
+					contactList.storeContactsOnDisk();
+					System.exit(0);
+				}
+				default: {
+					System.out.println("Invalid option:" + option + " Please choose in between 1:4.");
+				}
+			}
+		}
+
+		
 	}
 }
 /*
 Welcome to the: TEAM 4 CONTACT LIST APPLICATION!
 
-program test started.
-
-step 1
-
+These are the tasks you can perform:
+1. Print all contacts
+2. Add new Contact
+3. Find contacts by last name
+4. Save and quit program
+Please enter the task number you'd like to perform: 1
 Current List: 
 []
-step 2
-
-Please enter FIRST name: Eric
-Please enter LAST name: Cavazos-Smith
-Please enter ADDRESS: 920 Bluebonnet Drive, Sunnyvale, CA 94086
-Please enter EMAIL: talk2ericacs@outlook.com
-Please enter PHONE NUMBER: 408-796-9991
-User Notes: Team member of Team 4 Project
-step 3
-
+These are the tasks you can perform:
+1. Print all contacts
+2. Add new Contact
+3. Find contacts by last name
+4. Save and quit program
+Please enter the task number you'd like to perform: 2
+Please enter FIRST name: ruchita
+Please enter LAST name: shukla
+Please enter ADDRESS: abc
+Please enter EMAIL: abc@gmail.com
+Please enter PHONE NUMBER: 1231231234
+User Notes: test
+These are the tasks you can perform:
+1. Print all contacts
+2. Add new Contact
+3. Find contacts by last name
+4. Save and quit program
+Please enter the task number you'd like to perform: 2
+Please enter FIRST name: Hari
+Please enter LAST name: Shukla
+Please enter ADDRESS: abc
+Please enter EMAIL: xyz@gmail.com
+Please enter PHONE NUMBER: 1234567890
+User Notes: test
+These are the tasks you can perform:
+1. Print all contacts
+2. Add new Contact
+3. Find contacts by last name
+4. Save and quit program
+Please enter the task number you'd like to perform: 2
+Please enter FIRST name: Ishaan
+Please enter LAST name: shah
+Please enter ADDRESS: aaa
+Please enter EMAIL: aaa@gmail.com
+Please enter PHONE NUMBER: 1234567811
+User Notes: test
+These are the tasks you can perform:
+1. Print all contacts
+2. Add new Contact
+3. Find contacts by last name
+4. Save and quit program
+Please enter the task number you'd like to perform: 1
 Current List: 
 [
 --------------------------------------------------
-NAME: Eric, Cavazos-Smith
+NAME: shah, Ishaan
 
-ADDRESS: 920 Bluebonnet Drive, Sunnyvale, CA 94086
+ADDRESS: aaa
 
-EMAIL: talk2ericacs@outlook.com
+EMAIL: aaa@gmail.com
 
-PHONE NUMBER: 408-796-9991
+PHONE NUMBER: 1234567811
 
-User Notes: Team member of Team 4 Project
---------------------------------------------------
-]
-step 4
-
-Please enter FIRST name: John
-Please enter LAST name: Doe
-Please enter ADDRESS: 555 JohnDoe Street, City of JohnDoe, CA 55555
-Please enter EMAIL: johndoe@johndoe.com
-Please enter PHONE NUMBER: 555-555-5555
-User Notes: Not a real person :)
-step 5
-
-Current List: 
-[
---------------------------------------------------
-NAME: Cavazos-Smith, Eric
-
-ADDRESS: 920 Bluebonnet Drive, Sunnyvale, CA 94086
-
-EMAIL: talk2ericacs@outlook.com
-
-PHONE NUMBER: 408-796-9991
-
-User Notes: Team member of Team 4 Project
+User Notes: test
 --------------------------------------------------
 , 
 --------------------------------------------------
-NAME: Doe, John
+NAME: Shukla, Hari
 
-ADDRESS: 555 JohnDoe Street, City of JohnDoe, CA 55555
+ADDRESS: abc
 
-EMAIL: johndoe@johndoe.com
+EMAIL: xyz@gmail.com
 
-PHONE NUMBER: 555-555-5555
+PHONE NUMBER: 1234567890
 
-User Notes: Not a real person :)
+User Notes: test
+--------------------------------------------------
+, 
+--------------------------------------------------
+NAME: shukla, ruchita
+
+ADDRESS: abc
+
+EMAIL: abc@gmail.com
+
+PHONE NUMBER: 1231231234
+
+User Notes: test
 --------------------------------------------------
 ]
-
-program test completed.
-
+These are the tasks you can perform:
+1. Print all contacts
+2. Add new Contact
+3. Find contacts by last name
+4. Save and quit program
+Please enter the task number you'd like to perform: 4
+Saving data and exiting program!
 */
